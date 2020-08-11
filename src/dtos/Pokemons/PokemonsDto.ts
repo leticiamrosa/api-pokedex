@@ -1,0 +1,5 @@
+interface PokemonsResponseData { };
+
+interface Response {
+
+}
