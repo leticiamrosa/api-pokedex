@@ -1,8 +1,8 @@
-import { Router } from 'express';
+import { Router } from 'express'
 
-import PokemonsRouter from '@routes/PokemonsRouter/PokemonsRouter';
-const routes = Router();
+import PokemonsRouter from '@routes/PokemonsRouter/PokemonsRouter'
+const routes = Router()
 
-routes.use('/pokemons', PokemonsRouter);
+routes.use('/pokemons', PokemonsRouter)
 
-export default routes;
+export default routes

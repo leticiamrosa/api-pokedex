@@ -1,19 +1,30 @@
-import { Router } from 'express';
-import PokemonsRepository from '@repositories/PokemonsRepository/PokemonsRepository';
-import PokemonsServicesFactory from 'src/services/PokemonsService.ts/PokemonsServiceFactory';
+import { Router } from 'express'
+import PokemonsServicesFactory from 'src/modules/pokemon/services/PokemonsService/PokemonsServiceFactory'
 
-const PokemonsRouter = Router();
+const PokemonsRouter = Router()
 
 PokemonsRouter.get('/', async (req, res) => {
   try {
-    const pokemonsService = new PokemonsServicesFactory().build();
-    const pokemons = await pokemonsService.getPokemon();
+    const pokemonsService = new PokemonsServicesFactory().build()
+    const pokemons = await pokemonsService.getPokemons()
 
-    return res.status(200).json(pokemons);
-
+    return res.status(200).json(pokemons)
   } catch (error) {
     return res.status(400).json({ error: error.message })
   }
 })
 
-export default PokemonsRouter;
+PokemonsRouter.get('/:pokemon', async (req, res) => {
+  const { pokemon } = req.params
+
+  try {
+    const pokemonsService = new PokemonsServicesFactory().build()
+    const pokemons = await pokemonsService.getPokemon({ pokemon })
+
+    return res.status(200).json(pokemons)
+  } catch (error) {
+    return res.status(400).json({ error: error.message })
+  }
+})
+
+export default PokemonsRouter
