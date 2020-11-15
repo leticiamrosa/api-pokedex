@@ -1,9 +1,9 @@
-import PokemonAvatar from '@modules/pokemon/interfaces/PokemonAvatar'
+import PokemonImage from '@modules/pokemon/interfaces/PokemonImage'
 
 export default interface Pokemon {
   pokemonId: string;
   name: string;
   order: string;
   types: object[];
-  image: PokemonAvatar;
+  image: PokemonImage;
 }
