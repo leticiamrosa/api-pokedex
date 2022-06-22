@@ -1,7 +1,8 @@
-import App from 'src/App'
+import App from './App'
 
 const defaultPort = 3333
+const port = process.env.PORT || defaultPort
 
-App.listen(defaultPort, () => {
-  console.log(`⚡️ Server listening on http://localhost:${defaultPort}`)
+App.listen(port, () => {
+  console.log(`⚡️ Server listening on http://localhost:${port}`)
 })

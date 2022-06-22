@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import PokemonsServicesFactory from 'src/modules/pokemon/services/PokemonsService/PokemonsServiceFactory'
+import PokemonsServicesFactory from '@modules/pokemon/services/PokemonsService/PokemonsServiceFactory'
 
 const PokemonsRouter = Router()
 

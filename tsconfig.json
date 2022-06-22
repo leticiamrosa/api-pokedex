@@ -16,12 +16,10 @@
 		"forceConsistentCasingInFileNames": true,
 		"baseUrl": ".",
 		"paths": {
-      "@service/*": ["./src/service/*"],
       "@modules/*": ["src/modules/*"],
       "@routes/*": ["./src/routes/*"],
       "@utils/*": ["./src/utils/*"],
-      "@config/*": ["./src/config/*"],
-      "@helpers/*": ["./src/helpers/*"]
+      "@helpers/*": ["./src/helpers/*"],
 		}
 	},
 	"include": ["src/**/*"]

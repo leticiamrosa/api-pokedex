@@ -7,7 +7,8 @@
     "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored",
     "start": "node dist/server.js",
     "dev": "ts-node-dev -r tsconfig-paths/register --ignore-watch node_modules --no-notify src/server.ts",
-    "test": "jest"
+    "test": "jest",
+    "postinstall": "npm run build"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.1",
@@ -44,5 +45,8 @@
     "express": "^4.17.1",
     "lodash": "^4.17.20",
     "query-string": "^6.13.1"
+  },
+  "engines": {
+    "node": "14.17.6"
   }
 }

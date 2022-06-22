@@ -1,7 +1,7 @@
 import Api from '@utils/api/Api'
 
 import PokemonsRepository from '@modules/pokemon/repositories/PokemonsRepository'
-import PokemonsService from './PokemonService'
+import PokemonsService from '@modules/pokemon/services/PokemonsService/PokemonService'
 
 export default class PokemonsServicesFactory {
   private pokemonsRepository: PokemonsRepository
